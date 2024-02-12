@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const [user, SetUser] = useState(LoginState);
   const [disabled, setdisabled] = useState(true);
+  console.log(user);
 
   const Email = (event) => {
     const value = event.target.value;
@@ -31,7 +32,8 @@ const Login = () => {
 
       console.log(response);
     } catch (error) {
-      const { message, success, data } = error;
+      console.log(error);
+      const { message } = error;
       toast(message);
     }
   };

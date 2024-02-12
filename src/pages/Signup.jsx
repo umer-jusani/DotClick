@@ -42,19 +42,20 @@ const Signup = () => {
         setTimeout(() => {
           navigate("/login");
         }, [2000]);
+        localStorage.setItem("username", user.username);
+        localStorage.setItem("email", user.email);
+        localStorage.setItem("password", user.password);
       })
       .catch((err) => {
         console.log(err);
         toast("SomeThing Went Wrong");
       });
-
-    toast(SuccessMsg);
   };
 
   return (
-    <div className="flex">
-      <div className=" w-[35%] h-screen flex justify-center items-center flex-col">
-        <ToastContainer position="top-right" />
+    <div className="flex overflow-hidden">
+      <ToastContainer position="top-right" />
+      <div className=" w-[35%] h-screen flex justify-center items-center flex-col anim">
         <h1 className="text-[#1E399F] font-bold text-3xl pb-10">SIGNUP</h1>
         <div className="flex flex-col">
           <input
@@ -89,7 +90,7 @@ const Signup = () => {
           </button>
         </div>
       </div>
-      <div className="w-[65%] bg-[#1E399F] h-screen flex justify-center items-center text-white text-lg font-bold flex-col abc">
+      <div className="w-[65%] bg-[#1E399F] h-screen flex justify-center items-center text-white text-lg font-bold flex-col abc anim">
         <img src={logo} alt="" className="h-24 w-48 mb-2" />
         <h1>Welcome Back to Win</h1>
       </div>
