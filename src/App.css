@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.abc {
+  border-bottom-left-radius: 41px;
+  border-top-left-radius: 41px;
+}
+
+input {
+  width: 15rem;
+}
+
+.anim {
+  opacity: 0;
+  transform: translateX(0);
+  animation: ss forwards 2s;
+}
+
+@keyframes ss {
+  100% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+}
