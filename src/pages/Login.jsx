@@ -29,8 +29,8 @@ const Login = () => {
           password: user.password,
         }
       );
-
       console.log(response);
+
     } catch (error) {
       console.log(error);
       const { message } = error;
